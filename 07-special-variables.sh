@@ -5,7 +5,7 @@ echo "No. of args: $#"
 echo "script name: $0"
 echo "Current user: $USER"
 echo "Current directory: $PWD"
-echo "Home directory: $Home"
+echo "Home directory: $HOME"
 echo "Process id: $$"
 sleep 10 &
 echo "BG-Process id: $!"
