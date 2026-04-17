@@ -7,6 +7,7 @@ if [ $USER_ID -ne 0]; then
    exit 1
 else
    echo "Proceeding with installation.."
+fi
 
 P_ID=$?
 if [ $P_ID -eq 0]; then
@@ -15,3 +16,4 @@ if [ $P_ID -eq 0]; then
 else
    echo "Installing nginx error.."
    exit 0
+fi
