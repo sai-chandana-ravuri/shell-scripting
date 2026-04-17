@@ -2,7 +2,7 @@
 
 USER_ID=$(id -u)
 
-if [ $USER_ID -ne 0]; then
+if [ $USER_ID -ne 0 ]; then
    echo "Please use admin access to install.."
    exit 1
 else
@@ -10,7 +10,7 @@ else
 fi
 
 P_ID=$?
-if [ $P_ID -eq 0]; then
+if [ $P_ID -eq 0 ]; then
    echo "Installting nginx..."
    dnf install nginx
 else
