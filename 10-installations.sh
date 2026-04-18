@@ -9,11 +9,12 @@ else
    echo "Proceeding with installation.."
 fi
 
+
+dnf install nginx -y
 P_ID=$?
 if [ $P_ID -eq 0 ]; then
-   echo "Installting nginx..."
-   dnf install nginx
+   echo "Installting nginx...SUCCESS"
 else
-   echo "Installing nginx error.."
+   echo "Installing nginx...FAILURE"
    exit 0
 fi
