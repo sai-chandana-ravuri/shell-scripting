@@ -7,5 +7,5 @@ B='\e[34m'
 N='\e[0m'
 
 
-echo -e $R
-echo -e $G
+echo -e "$R red color"
+echo -e "$G green color"
