@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# set -e
-trap "There is an in $LINENO, Command: $BASH_COMMAND" ERR
+set -e
+trap 'echo "There is an in $LINENO, Command: $BASH_COMMAND"' ERR
 
 
 echo "hello"
