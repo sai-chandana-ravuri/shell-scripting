@@ -16,5 +16,5 @@ if [ $P_ID -eq 0 ]; then
    echo "Installting nginx...SUCCESS"
 else
    echo "Installing nginx...FAILURE"
-   exit 0
+   exit 1
 fi
