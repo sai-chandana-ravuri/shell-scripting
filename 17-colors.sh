@@ -11,19 +11,19 @@ B='\e[34m'
 N='\e[0m'
 
 if [ $USER_ID -ne 0 ]; then
-   echo "Please use admin access to install.." | tee -a $LOGS_FILE
+   echo -e "$R Please use admin access to install.." | tee -a $LOGS_FILE
    exit 1
 else
-   echo "$G Proceeding with installation.."
+   echo -e "$G Proceeding with installation.."
 fi
 
 mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
 if [ $1 -eq 0 ]; then
-   echo -e "$G $2...SUCCESS" | tee -a $LOGS_FILE
+   echo -e "$2...$G SUCCESS" | tee -a $LOGS_FILE
 else
-   echo -e "$R $2...FAILURE" | tee -a $LOGS_FILE
+   echo -e "$2...$R FAILURE" | tee -a $LOGS_FILE
    exit 1
 fi
 }
@@ -36,7 +36,7 @@ do
     dnf install $package -y &>>$LOGS_FILE
     VALIDATE $? "Installing $package"
   else
-    echo -e "$Y $package already installed, skipping installation."
+    echo -e "$Y $package already installed, SKIPPING installation."
   fi
 done
 
