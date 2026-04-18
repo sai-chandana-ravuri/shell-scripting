@@ -12,7 +12,7 @@ else
    echo "Proceeding with installation.."
 fi
 
-
+mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
 if [ $1 -eq 0 ]; then
