@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+# set -e
 trap "There is an in $LINENO, Command: $BASH_COMMAND" ERR
 
 
