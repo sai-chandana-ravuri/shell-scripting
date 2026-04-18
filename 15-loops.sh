@@ -25,13 +25,13 @@ fi
 
 for package in $@
 do
-  dnf list installed $package
+  dnf list installed $package &>>$LOGS_FILE
   if [ $? -ne 0 ]; then
     echo "$package is not installed, installing now.."
-    dnf install $package -y &>> $LOGS_FILE
+    dnf install $package -y &>>$LOGS_FILE
     VALIDATE $? "Installing $package"
   else
-    echo "$package already insatlled, skipping installation."
+    echo "$package already installed, skipping installation."
   fi
 done
 
