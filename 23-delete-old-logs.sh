@@ -10,7 +10,7 @@ N='\e[0m'
 LOGS_DIR=/home/ec2-user/app-logs
 LOGS_FILE="$LOGS_DIR/$0.log"
 
-if [ !-d $LOGS_DIR ]; then
+if [ ! -d $LOGS_DIR ]; then
     echo -e "Directory doesn't exist"
     exit 1
 fi
