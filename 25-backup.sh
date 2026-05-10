@@ -62,7 +62,7 @@ else
     tar -zcvf $ZIP_FILE_NAME $(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
     # Check archieve is success or not
-    if [ -f $ZIP_FILE_NAME]; then
+    if [ -f $ZIP_FILE_NAME ]; then
         log "Archeival is ... $G SUCCESS $N"
         while IFS= read -r filepath; do
         # Process each line here
