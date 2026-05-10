@@ -21,7 +21,7 @@ fi
 mkdir -p $LOGS_FOLDER
 
 log(){
-    echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a $LOGS_FILE"
+    echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a "$LOGS_FILE"
 }
 
 USAGE(){
